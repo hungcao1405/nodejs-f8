@@ -26,12 +26,12 @@ app.engine(
         extname: '.hbs',
     }),
 );
-                                                                  app.set('view engine', '.hbs');
-                                                                  app.set('views', path.join(__dirname, 'resources/views'));
+app.set('view engine', '.hbs');
+app.set('views', path.join(__dirname, 'resources/views'));
 
-                          routes(                                                      app);
+routes(app);
 
-                                                                  //127.0.0.1 - localhost
-                                                                  app.listen(port, () => {
-                                                                      console.log(`Example app listening at http://localhost:${port}`);
-                                                                  });
+//127.0.0.1 - localhost
+app.listen(port, () => {
+    console.log(`Example app listening at http://localhost:${port}`);
+});
