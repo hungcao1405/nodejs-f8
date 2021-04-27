@@ -1,11 +1,14 @@
 const newsRouter = require('./news');
 const siteRouter = require('./site');
+const coursesRouter = require('./courses');
 
 function routes(app) {
     //cau hinh 1 routes chứa các router con
+    app.use('/courses', coursesRouter);
     app.use('/news', newsRouter);
     app.use('/search', siteRouter);
     app.use('/', siteRouter);
+
     // app.get('/', (req, res) => {
     // return res.render('home');
     // })
